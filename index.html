@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
@@ -337,3 +338,344 @@
   </html>
 
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Akif Fazal</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Personal portfolio showcasing Data Science, ML, DL, CV, and NLP projects." />
+    <meta name="keywords" content="Portfolio, Data Science, Machine Learning, Deep Learning, Computer Vision, NLP" />
+    <meta name="author" content="Akif Fazal" />
+
+    <!-- Favicon (optional) -->
+    <link rel="icon" href="https://fav.farm/⚙️" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bg: '#0b1220',
+              surface: '#0f172a',
+              text: '#e5e7eb',
+              muted: '#94a3b8',
+              accent: '#22d3ee',
+              accent2: '#38bdf8'
+            },
+            boxShadow: {
+              card: '0 10px 30px rgba(0,0,0,0.25)'
+            },
+            fontFamily: {
+              inter: ['Inter','Poppins','ui-sans-serif','system-ui']
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-wZ7v3QzvO1Jt7b6n+3u1b7h0L6h9q8l8xvH9+vE1dHc8J5kqk0b8jVfCqO2oQ0qV7j0lqUes0W+3kQ9aQ1h3Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- AOS (Animate On Scroll) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-p7rj8NKm6QO3q+Yl1wJb8m1Jr8y3bT+0pV7k8iU6y5e7E0d4G4GgG8i0WlB3yP8GJv8I4q8Hf3n8aS5w5nXl7w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body class="bg-bg text-text font-inter">
+    <!-- Header / Navbar -->
+    <header id="header" class="sticky top-0 z-50 backdrop-blur bg-bg/85 border-b border-slate-700/50">
+      <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+        <a href="#welcome" class="text-lg font-semibold text-white">Akif Fazal</a>
+        <nav class="relative" aria-label="Main Navigation">
+          <button class="nav-toggle md:hidden border border-slate-700/60 bg-surface text-white rounded-lg px-3 py-2" aria-label="Toggle navigation" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <ul class="nav-list hidden md:flex items-center gap-4 absolute right-0 top-12 md:static md:top-auto md:right-auto bg-surface md:bg-transparent border md:border-0 border-slate-700/60 rounded-xl p-3 md:p-0 min-w-[220px] md:min-w-0">
+            <li><a href="#welcome" class="nav-link block px-3 py-2 rounded-lg text-muted hover:text-white hover:bg-white/5">Welcome</a></li>
+            <li><a href="#about" class="nav-link block px-3 py-2 rounded-lg text-muted hover:text-white hover:bg-white/5">About</a></li>
+            <li><a href="#experience" class="nav-link block px-3 py-2 rounded-lg text-muted hover:text-white hover:bg-white/5">Experience</a></li>
+            <li><a href="#education" class="nav-link block px-3 py-2 rounded-lg text-muted hover:text-white hover:bg-white/5">Education</a></li>
+            <li><a href="#projects" class="nav-link block px-3 py-2 rounded-lg text-muted hover:text-white hover:bg-white/5">Projects</a></li>
+            <li><a href="#skills" class="nav-link block px-3 py-2 rounded-lg text-muted hover:text-white hover:bg-white/5">Skills</a></li>
+            <li><a href="#certifications" class="nav-link block px-3 py-2 rounded-lg text-muted hover:text-white hover:bg-white/5">Certifications</a></li>
+            <li><a href="#contact" class="nav-link block px-3 py-2 rounded-lg text-muted hover:text-white hover:bg-white/5">Contact</a></li>
+          </ul>
+        </nav>
+        <button id="themeToggle" class="border border-slate-700/60 bg-surface text-white rounded-lg px-3 py-2" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="welcome" class="py-20 md:py-28">
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12">
+        <div data-aos="fade-up" data-aos-delay="100">
+          <h1 class="text-4xl md:text-5xl font-bold tracking-tight">Hi, I'm <span class="text-accent">Akif Fazal</span></h1>
+          <p class="mt-4 text-muted max-w-prose">A Data Scientist and Embedded Systems Engineer passionate about combining AI and hardware innovation. Experienced in Machine Learning, Deep Learning, NLP, and Computer Vision, along with hands-on work in embedded systems using STM32, ESP32, and 8051 microcontrollers. Focused on creating intelligent, data-driven solutions that bridge software intelligence with real-world devices.
+            Electrical Engineer and Machine Learning & Data Science enthusiast. I explore data-driven solutions across ML, DL, CV, and NLP, turning insights into practical applications.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a class="inline-flex items-center gap-2 bg-gradient-to-tr from-accent to-accent2 text-bg border-0 rounded-xl px-4 py-3 shadow-card transition -translate-y-0 hover:-translate-y-0.5" href="assets/Akif_Fazal_Resume.pdf" download>
+              <i class="fa-solid fa-file-arrow-down"></i>
+              Download Resume
+            </a>
+            <a class="inline-flex items-center gap-2 border border-slate-700/60 rounded-xl px-4 py-3 text-white hover:bg-white/5 transition" href="#projects">View Projects</a>
+          </div>
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="200" class="flex justify-center">
+          <div class="relative">
+            <div class="absolute inset-0 rounded-full bg-gradient-to-br from-accent/40 via-accent2/30 to-transparent blur-xl opacity-60"></div>
+            <img src="assets/profile.jpg" alt="Portrait of Akif Fazal" class="relative w-64 h-64 md:w-72 md:h-72 rounded-full object-cover border-4 border-slate-700/50 shadow-2xl ring-4 ring-accent/20 transition-all duration-300 hover:scale-105 hover:shadow-accent/20 hover:ring-accent/40" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 border-t border-slate-800/60">
+      <div class="max-w-6xl mx-auto px-6" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold mb-8 flex items-center gap-3"><i class="fa-solid fa-user text-accent"></i> About Me</h2>
+        <p class="text-muted max-w-3xl">
+          I'm an Electrical Engineer passionate about Machine Learning and Data Science. I enjoy building
+          end-to-end projects—from data collection and analysis to modeling, evaluation, and deployment.
+          I'm particularly interested in NLP, Computer Vision, and statistical learning.
+        </p>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 border-t border-slate-800/60">
+      <div class="max-w-6xl mx-auto px-6" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold mb-8 flex items-center gap-3"><i class="fa-solid fa-briefcase text-accent"></i> Experience</h2>
+        <div class="space-y-6">
+          <article class="border border-slate-700/60 bg-surface rounded-xl p-5">
+            <div class="flex flex-col gap-1">
+              <h3 class="text-lg font-semibold">Embedded System Engineer — Chip Soul Technology (SMC-Pvt) Ltd</h3>
+              <span class="text-muted text-sm">Peshawar, Pakistan • Full-time • Feb 2024 – Nov 2024 (10 mos)</span>
+            </div>
+            <ul class="list-disc ml-5 mt-2 space-y-1 text-sm">
+              <li>Worked with 8051, STM32, and ESP32 microcontrollers; built embedded firmware in C.</li>
+              <li>Developed and debugged peripherals and ADC/DAC interfaces using Keil uVision and Arduino IDE.</li>
+              <li>Contributed to hardware bring-up and testing for embedded devices.</li>
+            </ul>
+          </article>
+
+          <article class="border border-slate-700/60 bg-surface rounded-xl p-5">
+            <div class="flex flex-col gap-1">
+              <h3 class="text-lg font-semibold">Data Science & AI Trainee — atomcamp</h3>
+              <span class="text-muted text-sm">Remote • Internship • Jan 2024 – Sep 2024 (9 mos)</span>
+            </div>
+            <ul class="list-disc ml-5 mt-2 space-y-1 text-sm">
+              <li>Completed hands-on projects across EDA, data wrangling, visualization, and ML workflows.</li>
+              <li>Practiced Python, Pandas, scikit-learn; delivered notebooks and reports.</li>
+            </ul>
+          </article>
+
+          <article class="border border-slate-700/60 bg-surface rounded-xl p-5">
+            <div class="timeline-heading">
+              <h3 class="text-lg font-semibold">Artificial Intelligence Intern — CISNR (UET Peshawar)</h3>
+              <span class="text-muted text-sm">Peshawar, Pakistan • Internship • Jul 2023 – Sep 2023 (3 mos)</span>
+            </div>
+            <ul class="list-disc ml-5 mt-2 space-y-1 text-sm">
+              <li>Worked on ML, Deep Learning, and Computer Vision projects for real-world use cases.</li>
+              <li>Contributed to algorithm development, data annotation/automation, and evaluation.</li>
+              <li>Stack: Python, scikit-learn, OpenCV, Excel.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 border-t border-slate-800/60">
+      <div class="max-w-6xl mx-auto px-6" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold mb-8 flex items-center gap-3"><i class="fa-solid fa-graduation-cap text-accent"></i> Education</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <article class="border border-slate-700/60 bg-surface rounded-xl p-5">
+            <h3 class="text-lg font-semibold">BSc Electrical Communication Engineering</h3>
+            <p class="text-muted text-sm">University of Engineering & Technology Peshawar • 2019 – 2023 • GPA 3.04/4.00</p>
+            <p class="text-sm mt-2 text-muted">Focus: Electrical, Electronics and Communications Engineering. Coursework in circuits, control systems, and computing; MATLAB and Embedded C.</p>
+          </article>
+
+          <article class="border border-slate-700/60 bg-surface rounded-xl p-5">
+            <h3 class="text-lg font-semibold">Applied Data Science</h3>
+            <p class="text-muted text-sm">WorldQuant University • Nov 2023 – Mar 2024</p>
+            <p class="text-sm mt-2 text-muted">Hands-on modules in EDA, data visualization, and model development. Credential: <a class="text-accent underline" href="https://www.credly.com/badges/69941393-8b84-4f16-a808-7aa5fcc757a1/linked_in_profile" target="_blank" rel="noopener">Credly badge</a>.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 border-t border-slate-800/60">
+      <div class="max-w-6xl mx-auto px-6" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold mb-8 flex items-center gap-3"><i class="fa-solid fa-diagram-project text-accent"></i> Projects</h2>
+        <div class="project-filters flex flex-wrap gap-2 mb-6" aria-label="Project categories">
+          <button class="filter-btn active border border-slate-700/60 bg-surface text-muted hover:text-white hover:bg-white/5 rounded-lg px-3 py-1.5" data-filter="all">All</button>
+          <button class="filter-btn border border-slate-700/60 bg-surface text-muted hover:text-white hover:bg-white/5 rounded-lg px-3 py-1.5" data-filter="ds">Data Science</button>
+          <button class="filter-btn border border-slate-700/60 bg-surface text-muted hover:text-white hover:bg-white/5 rounded-lg px-3 py-1.5" data-filter="ml">ML</button>
+          <button class="filter-btn border border-slate-700/60 bg-surface text-muted hover:text-white hover:bg-white/5 rounded-lg px-3 py-1.5" data-filter="dl">DL</button>
+          <button class="filter-btn border border-slate-700/60 bg-surface text-muted hover:text-white hover:bg-white/5 rounded-lg px-3 py-1.5" data-filter="cv">CV</button>
+          <button class="filter-btn border border-slate-700/60 bg-surface text-muted hover:text-white hover:bg-white/5 rounded-lg px-3 py-1.5" data-filter="nlp">NLP</button>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Projects from Akif's GitHub profile -->
+          <article class="project-card border border-slate-700/60 bg-surface rounded-xl p-5 flex flex-col gap-3 hover:-translate-y-1 hover:shadow-card transition" data-category="ds">
+            <div>
+              <h3 class="text-lg font-semibold">SQL Case Study: Foodie-Fi</h3>
+              <p class="text-sm text-muted mt-1">Exploratory SQL case study analyzing subscription metrics and customer behavior.</p>
+            </div>
+            <div class="flex gap-3">
+              <a class="text-accent underline" href="https://github.com/Akiffazal/SQL-Case-Study-Foodie-Fi" target="_blank" rel="noopener">GitHub <i class="fa-brands fa-github"></i></a>
+            </div>
+          </article>
+
+          <article class="project-card border border-slate-700/60 bg-surface rounded-xl p-5 flex flex-col gap-3 hover:-translate-y-1 hover:shadow-card transition" data-category="nlp ml">
+            <div>
+              <h3 class="text-lg font-semibold">BBC News Text Classification</h3>
+              <p class="text-sm text-muted mt-1">NLP project classifying news articles using traditional ML pipelines.</p>
+            </div>
+            <div class="flex gap-3">
+              <a class="text-accent underline" href="https://github.com/Akiffazal/Text-Classification-of-BBC-News-Articles" target="_blank" rel="noopener">GitHub <i class="fa-brands fa-github"></i></a>
+            </div>
+          </article>
+
+          <article class="project-card border border-slate-700/60 bg-surface rounded-xl p-5 flex flex-col gap-3 hover:-translate-y-1 hover:shadow-card transition" data-category="ds ml">
+            <div>
+              <h3 class="text-lg font-semibold">Customer Segmentation (k-means)</h3>
+              <p class="text-sm text-muted mt-1">Unsupervised clustering to segment customers based on purchasing behavior.</p>
+            </div>
+            <div class="flex gap-3">
+              <a class="text-accent underline" href="https://github.com/Akiffazal/Customer-segmentation-using-k-means" target="_blank" rel="noopener">GitHub <i class="fa-brands fa-github"></i></a>
+            </div>
+          </article>
+
+          <article class="project-card border border-slate-700/60 bg-surface rounded-xl p-5 flex flex-col gap-3 hover:-translate-y-1 hover:shadow-card transition" data-category="ds">
+            <div>
+              <h3 class="text-lg font-semibold">IBM Data Science: Web Scraping</h3>
+              <p class="text-sm text-muted mt-1">Data acquisition via web scraping as part of the IBM DS track.</p>
+            </div>
+            <div class="flex gap-3">
+              <a class="text-accent underline" href="https://github.com/Akiffazal/IBM_Data_Science_Web-Scrapping" target="_blank" rel="noopener">GitHub <i class="fa-brands fa-github"></i></a>
+            </div>
+          </article>
+
+          <article class="project-card border border-slate-700/60 bg-surface rounded-xl p-5 flex flex-col gap-3 hover:-translate-y-1 hover:shadow-card transition" data-category="embedded">
+            <div>
+              <h3 class="text-lg font-semibold">8051 Microcontroller Tasks</h3>
+              <p class="text-sm text-muted mt-1">Practical embedded systems tasks based on the STC89C52 training manual.</p>
+            </div>
+            <div class="flex gap-3">
+              <a class="text-accent underline" href="https://github.com/Akiffazal/8051-Microcontroller-Training-Tasks" target="_blank" rel="noopener">GitHub <i class="fa-brands fa-github"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 border-t border-slate-800/60">
+      <div class="max-w-6xl mx-auto px-6" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold mb-8 flex items-center gap-3"><i class="fa-solid fa-gear text-accent"></i> Skills</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <article class="border border-slate-700/60 bg-surface rounded-xl p-5">
+            <h3 class="text-lg font-semibold mb-3 flex items-center gap-2"><i class="fa-solid fa-code text-accent"></i> Programming</h3>
+            <p class="text-muted text-sm">Python, C, C++, SQL</p>
+          </article>
+          
+          <article class="border border-slate-700/60 bg-surface rounded-xl p-5">
+            <h3 class="text-lg font-semibold mb-3 flex items-center gap-2"><i class="fa-solid fa-chart-line text-accent"></i> Data & AI</h3>
+            <p class="text-muted text-sm">Machine Learning, Deep Learning, NLP, Computer Vision, Data Visualization, MLOps</p>
+          </article>
+          
+          <article class="border border-slate-700/60 bg-surface rounded-xl p-5">
+            <h3 class="text-lg font-semibold mb-3 flex items-center gap-2"><i class="fa-solid fa-robot text-accent"></i> Tools & Frameworks</h3>
+            <p class="text-muted text-sm">TensorFlow, Scikit-learn, Power BI, MS Excel, GIS</p>
+          </article>
+          
+          <article class="border border-slate-700/60 bg-surface rounded-xl p-5">
+            <h3 class="text-lg font-semibold mb-3 flex items-center gap-2"><i class="fa-solid fa-microchip text-accent"></i> Embedded Systems</h3>
+            <p class="text-muted text-sm">STM32, ESP32, 8051, Arduino, Sensor Interfacing, Peripheral Integration (UART, SPI, I2C, ADC, PWM)</p>
+          </article>
+          
+          <article class="border border-slate-700/60 bg-surface rounded-xl p-5">
+            <h3 class="text-lg font-semibold mb-3 flex items-center gap-2"><i class="fa-solid fa-brain text-accent"></i> Concepts</h3>
+            <p class="text-muted text-sm">Model Training & Evaluation, Feature Engineering, Data Preprocessing, Predictive Analytics</p>
+          </article>
+          
+          <article class="border border-slate-700/60 bg-surface rounded-xl p-5">
+            <h3 class="text-lg font-semibold mb-3 flex items-center gap-2"><i class="fa-solid fa-toolbox text-accent"></i> Development Tools</h3>
+            <p class="text-muted text-sm">STM32CubeIDE, Keil uVision, Arduino IDE, Proteus, Cisco Packet Tracer, Wireshark</p>
+          </article>
+          
+          <article class="border border-slate-700/60 bg-surface rounded-xl p-5 md:col-span-2">
+            <h3 class="text-lg font-semibold mb-3 flex items-center gap-2"><i class="fa-solid fa-globe text-accent"></i> Others</h3>
+            <p class="text-muted text-sm">GitHub, VS Code, Google Colab, Jupyter Notebook</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20 border-t border-slate-800/60">
+        <div class="max-w-6xl mx-auto px-6" data-aos="fade-up">
+          <h2 class="text-3xl font-semibold mb-8 flex items-center gap-3"><i class="fa-solid fa-certificate text-accent"></i> Certifications</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <article class="border border-slate-700/60 bg-surface rounded-xl p-5"><h3 class="text-lg font-semibold">AWS Certified Solutions Architect – Associate</h3><p class="text-muted text-sm">Amazon Web Services • Issued Aug 2025 • Expires Aug 2028</p></article>
+            <article class="border border-slate-700/60 bg-surface rounded-xl p-5"><h3 class="text-lg font-semibold">Top Performer — C1 PEC Generative AI Training Cohort 1</h3><p class="text-muted text-sm">Pak Angels • Feb 2025</p></article>
+            <article class="border border-slate-700/60 bg-surface rounded-xl p-5"><h3 class="text-lg font-semibold">Artificial Intelligence Bootcamp</h3><p class="text-muted text-sm">atomcamp • Oct 2024</p></article>
+            <article class="border border-slate-700/60 bg-surface rounded-xl p-5"><h3 class="text-lg font-semibold">Data Science & Machine Learning Crash Course</h3><p class="text-muted text-sm">Dicecamp • Oct 2024</p></article>
+            <article class="border border-slate-700/60 bg-surface rounded-xl p-5"><h3 class="text-lg font-semibold">Data Science Bootcamp</h3><p class="text-muted text-sm">atomcamp • May 2024</p></article>
+            <article class="border border-slate-700/60 bg-surface rounded-xl p-5"><h3 class="text-lg font-semibold">Applied Data Science Lab</h3><p class="text-muted text-sm">WorldQuant University • Feb 2024</p></article>
+            <article class="border border-slate-700/60 bg-surface rounded-xl p-5"><h3 class="text-lg font-semibold">Databases and SQL for Data Science with Python</h3><p class="text-muted text-sm">IBM • Feb 2024</p></article>
+            <article class="border border-slate-700/60 bg-surface rounded-xl p-5"><h3 class="text-lg font-semibold">Introduction to Microsoft Excel</h3><p class="text-muted text-sm">Coursera • Feb 2024</p></article>
+            <article class="border border-slate-700/60 bg-surface rounded-xl p-5"><h3 class="text-lg font-semibold">Python for Beginners</h3><p class="text-muted text-sm">atomcamp • Feb 2024</p></article>
+            <article class="border border-slate-700/60 bg-surface rounded-xl p-5"><h3 class="text-lg font-semibold">Registered Engineer</h3><p class="text-muted text-sm">Pakistan Engineering Council • Jan 2024</p></article>
+            <article class="border border-slate-700/60 bg-surface rounded-xl p-5"><h3 class="text-lg font-semibold">Intro to Machine Learning</h3><p class="text-muted text-sm">Kaggle • Nov 2023 • <a class="text-accent underline" href="https://www.kaggle.com/learn/certification/akiffazal/intro-to-machine-learning" target="_blank" rel="noopener">Credential</a></p></article>
+            <article class="border border-slate-700/60 bg-surface rounded-xl p-5"><h3 class="text-lg font-semibold">Python 3 Programming Specialization</h3><p class="text-muted text-sm">Coursera • Nov 2023</p></article>
+            <article class="border border-slate-700/60 bg-surface rounded-xl p-5"><h3 class="text-lg font-semibold">Python Data Structures</h3><p class="text-muted text-sm">Coursera • Sep 2023</p></article>
+            <article class="border border-slate-700/60 bg-surface rounded-xl p-5"><h3 class="text-lg font-semibold">AI for Everyone</h3><p class="text-muted text-sm">Coursera • Aug 2023</p></article>
+            <article class="border border-slate-700/60 bg-surface rounded-xl p-5"><h3 class="text-lg font-semibold">Programming for Everybody (Getting Started with Python)</h3><p class="text-muted text-sm">Coursera • Aug 2023</p></article>
+          </div>
+        </div>
+      </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 border-t border-slate-800/60">
+      <div class="max-w-6xl mx-auto px-6" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold mb-3 flex items-center gap-3"><i class="fa-solid fa-paper-plane text-accent"></i> Get In Touch</h2>
+        <p class="text-muted">Feel free to reach out for collaborations or just a friendly hello 👋</p>
+        <div class="mt-4 flex flex-wrap gap-3">
+          <a href="mailto:akiffazal007@gmail.com" class="border border-slate-700/60 bg-surface rounded-lg px-3 py-2 hover:bg-white/5 transition"><i class="fa-solid fa-envelope mr-2"></i>Email</a>
+          <a href="https://github.com/Akiffazal" target="_blank" rel="noopener" class="border border-slate-700/60 bg-surface rounded-lg px-3 py-2 hover:bg-white/5 transition"><i class="fa-brands fa-github mr-2"></i>GitHub</a>
+          <a href="https://www.linkedin.com/in/akif-fazal/" target="_blank" rel="noopener" class="border border-slate-700/60 bg-surface rounded-lg px-3 py-2 hover:bg-white/5 transition"><i class="fa-brands fa-linkedin mr-2"></i>LinkedIn</a>
+          <a href="https://www.kaggle.com/akiffazal" target="_blank" rel="noopener" class="border border-slate-700/60 bg-surface rounded-lg px-3 py-2 hover:bg-white/5 transition"><i class="fa-brands fa-kaggle mr-2"></i>Kaggle</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800/60">
+      <div class="max-w-6xl mx-auto px-6 py-6 text-center text-muted">
+        <p>© <span id="year"></span> Akif Fazal. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1QnRrJ6BvQpT0i1vUQkqX5mGxYj2c7sIDbKqC2o5nZ0Sg7C8Uq4g9v3nYF2Ggk8F3q9u3z3u6i3l5s7wQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+  </body>
+  </html>
+
+
+>>>>>>> 4e2b076afafa47fd1299a3834ccbf65cb3c050e2
