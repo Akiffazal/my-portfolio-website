@@ -46,7 +46,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-wZ7v3QzvO1Jt7b6n+3u1b7h0L6h9q8l8xvH9+vE1dHc8J5kqk0b8jVfCqO2oQ0qV7j0lqUes0W+3kQ9aQ1h3Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- AOS (Animate On Scroll) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-p7rj8NKm6QO3q+Yl1wJb8m1Jr8y3bT+0pV7k8iU6y5e7E0d4G4GgG8i0WlB3yP8GJv8I4q8Hf3n8aS5w5nXl7w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-p7rj8NKm6QO3q+Yl1wJb8m1Jr8y3bT+0pV7k8iU6y5e7E0d4G4GG8i0WlB3yP8GJv8I4q8Hf3n8aS5w5nXl7w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Mobile Menu Styles -->
+    <link rel="stylesheet" href="mobile-menu.css" />
+    <link rel="stylesheet" href="hamburger.css" />
+    
+    <!-- Mobile Menu Script -->
+    <script src="mobile-menu.js" defer></script>
     <style>
       .nav-link.active {
         @apply text-white bg-white/10;
@@ -62,8 +69,12 @@
       <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
         <a href="#welcome" class="text-base sm:text-lg font-semibold text-white whitespace-nowrap">Akif Fazal</a>
         <nav class="relative flex items-center gap-2" aria-label="Main Navigation">
-          <button class="nav-toggle md:hidden border border-slate-700/60 bg-surface text-white rounded-lg px-3 py-2 transition hover:bg-white/10" aria-label="Toggle navigation" aria-expanded="false">
-            <i class="fa-solid fa-bars"></i>
+          <button class="nav-toggle fixed top-4 right-4 md:hidden flex items-center justify-center transition z-50" aria-label="Toggle navigation" aria-expanded="false">
+            <div class="hamburger-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </button>
           <ul class="nav-list hidden md:flex items-center gap-4 absolute right-0 top-full mt-2 md:static md:top-auto md:right-auto bg-surface md:bg-transparent border md:border-0 border-slate-700/60 rounded-xl p-3 md:p-0 min-w-[220px] md:min-w-0 shadow-xl md:shadow-none z-50">
             <li><a href="#welcome" class="nav-link block px-3 py-2 rounded-lg text-muted hover:text-white hover:bg-white/5">Welcome</a></li>
@@ -188,15 +199,13 @@
         <h2 class="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8 flex items-center gap-3"><i class="fa-solid fa-diagram-project text-accent"></i> Projects</h2>
         <div class="project-filters flex flex-wrap gap-2 mb-6" aria-label="Project categories">
           <button class="filter-btn active border border-slate-700/60 bg-surface text-muted hover:text-white hover:bg-white/5 rounded-lg px-3 py-1.5" data-filter="all">All</button>
-          <button class="filter-btn border border-slate-700/60 bg-surface text-muted hover:text-white hover:bg-white/5 rounded-lg px-3 py-1.5" data-filter="ds">Data Science</button>
-          <button class="filter-btn border border-slate-700/60 bg-surface text-muted hover:text-white hover:bg-white/5 rounded-lg px-3 py-1.5" data-filter="ml">ML</button>
-          <button class="filter-btn border border-slate-700/60 bg-surface text-muted hover:text-white hover:bg-white/5 rounded-lg px-3 py-1.5" data-filter="dl">DL</button>
-          <button class="filter-btn border border-slate-700/60 bg-surface text-muted hover:text-white hover:bg-white/5 rounded-lg px-3 py-1.5" data-filter="cv">CV</button>
-          <button class="filter-btn border border-slate-700/60 bg-surface text-muted hover:text-white hover:bg-white/5 rounded-lg px-3 py-1.5" data-filter="nlp">NLP</button>
+          <button class="filter-btn border border-slate-700/60 bg-surface text-muted hover:text-white hover:bg-white/5 rounded-lg px-3 py-1.5" data-filter="ai">AI</button>
+          <button class="filter-btn border border-slate-700/60 bg-surface text-muted hover:text-white hover:bg-white/5 rounded-lg px-3 py-1.5" data-filter="data">Data Analysis</button>
+          <button class="filter-btn border border-slate-700/60 bg-surface text-muted hover:text-white hover:bg-white/5 rounded-lg px-3 py-1.5" data-filter="embedded">Embedded Systems</button>
         </div>
         <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           <!-- Projects from Akif's GitHub profile -->
-          <article class="project-card border border-slate-700/60 bg-surface rounded-xl p-4 sm:p-5 flex flex-col gap-3 hover:-translate-y-1 hover:shadow-card transition" data-category="ds">
+          <article class="project-card border border-slate-700/60 bg-surface rounded-xl p-4 sm:p-5 flex flex-col gap-3 hover:-translate-y-1 hover:shadow-card transition" data-category="data">
             <div>
               <h3 class="text-base sm:text-lg font-semibold">SQL Case Study: Foodie-Fi</h3>
               <p class="text-sm text-muted mt-1">Exploratory SQL case study analyzing subscription metrics and customer behavior.</p>
@@ -206,7 +215,7 @@
             </div>
           </article>
 
-          <article class="project-card border border-slate-700/60 bg-surface rounded-xl p-4 sm:p-5 flex flex-col gap-3 hover:-translate-y-1 hover:shadow-card transition" data-category="nlp ml">
+          <article class="project-card border border-slate-700/60 bg-surface rounded-xl p-4 sm:p-5 flex flex-col gap-3 hover:-translate-y-1 hover:shadow-card transition" data-category="ai">
             <div>
               <h3 class="text-base sm:text-lg font-semibold">BBC News Text Classification</h3>
               <p class="text-sm text-muted mt-1">NLP project classifying news articles using traditional ML pipelines.</p>
@@ -216,7 +225,7 @@
             </div>
           </article>
 
-          <article class="project-card border border-slate-700/60 bg-surface rounded-xl p-4 sm:p-5 flex flex-col gap-3 hover:-translate-y-1 hover:shadow-card transition" data-category="ds ml">
+          <article class="project-card border border-slate-700/60 bg-surface rounded-xl p-4 sm:p-5 flex flex-col gap-3 hover:-translate-y-1 hover:shadow-card transition" data-category="ai">
             <div>
               <h3 class="text-base sm:text-lg font-semibold">Customer Segmentation (k-means)</h3>
               <p class="text-sm text-muted mt-1">Unsupervised clustering to segment customers based on purchasing behavior.</p>
@@ -226,23 +235,43 @@
             </div>
           </article>
 
-          <article class="project-card border border-slate-700/60 bg-surface rounded-xl p-4 sm:p-5 flex flex-col gap-3 hover:-translate-y-1 hover:shadow-card transition" data-category="ds">
+          <article class="project-card border border-slate-700/60 bg-surface rounded-xl p-4 sm:p-5 flex flex-col gap-3 hover:-translate-y-1 hover:shadow-card transition" data-category="ai">
             <div>
-              <h3 class="text-base sm:text-lg font-semibold">IBM Data Science: Web Scraping</h3>
-              <p class="text-sm text-muted mt-1">Data acquisition via web scraping as part of the IBM DS track.</p>
+              <h3 class="text-base sm:text-lg font-semibold">Students Adaptability Level Prediction</h3>
+              <p class="text-sm text-muted mt-1">Machine learning model using KNN and Decision Tree to predict students' adaptability to online education.</p>
             </div>
             <div class="flex gap-3">
-              <a class="text-accent underline" href="https://github.com/Akiffazal/IBM_Data_Science_Web-Scrapping" target="_blank" rel="noopener">GitHub <i class="fa-brands fa-github"></i></a>
+              <a class="text-accent underline" href="https://github.com/Akiffazal/Students-Adaptability-KNN-Decision-Tree" target="_blank" rel="noopener">GitHub <i class="fa-brands fa-github"></i></a>
+            </div>
+          </article>
+
+          <article class="project-card border border-slate-700/60 bg-surface rounded-xl p-4 sm:p-5 flex flex-col gap-3 hover:-translate-y-1 hover:shadow-card transition" data-category="data">
+            <div>
+              <h3 class="text-base sm:text-lg font-semibold">Sales Data Analysis Using PowerBI</h3>
+              <p class="text-sm text-muted mt-1">Comprehensive sales data analysis and visualization dashboard created with PowerBI.</p>
+            </div>
+            <div class="flex gap-3">
+              <a class="text-accent underline" href="https://github.com/Akiffazal/Sales-Data-Analysis-Using-PowerBI" target="_blank" rel="noopener">GitHub <i class="fa-brands fa-github"></i></a>
             </div>
           </article>
 
           <article class="project-card border border-slate-700/60 bg-surface rounded-xl p-4 sm:p-5 flex flex-col gap-3 hover:-translate-y-1 hover:shadow-card transition" data-category="embedded">
             <div>
-              <h3 class="text-base sm:text-lg font-semibold">8051 Microcontroller Tasks</h3>
+              <h3 class="text-base sm:text-lg font-semibold">8051 Microcontroller Projects</h3>
               <p class="text-sm text-muted mt-1">Practical embedded systems tasks based on the STC89C52 training manual.</p>
             </div>
             <div class="flex gap-3">
               <a class="text-accent underline" href="https://github.com/Akiffazal/8051-Microcontroller-Training-Tasks" target="_blank" rel="noopener">GitHub <i class="fa-brands fa-github"></i></a>
+            </div>
+          </article>
+
+          <article class="project-card border border-slate-700/60 bg-surface rounded-xl p-4 sm:p-5 flex flex-col gap-3 hover:-translate-y-1 hover:shadow-card transition" data-category="embedded">
+            <div>
+              <h3 class="text-base sm:text-lg font-semibold">EEPROM Interfacing with 8051</h3>
+              <p class="text-sm text-muted mt-1">Implementation of EEPROM interfacing with 8051 microcontroller for data storage and retrieval.</p>
+            </div>
+            <div class="flex gap-3">
+              <a class="text-accent underline" href="https://github.com/Akiffazal/EEPROM-Interfacing-with-8051-Microcontroller" target="_blank" rel="noopener">GitHub <i class="fa-brands fa-github"></i></a>
             </div>
           </article>
         </div>

@@ -1,0 +1,28 @@
+/* Hamburger Menu Icon Styles */
+.hamburger-icon {
+  width: 24px !important;
+  height: 16px !important;
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  background: none !important;
+}
+
+.hamburger-icon span {
+  display: block !important;
+  width: 100% !important;
+  height: 2px !important;
+  background-color: #ffffff !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Remove any background from the toggle button */
+.nav-toggle {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: auto !important;
+  height: auto !important;
+}
