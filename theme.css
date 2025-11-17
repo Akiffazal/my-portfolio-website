@@ -175,6 +175,13 @@ html[data-theme='dark'] .theme-toggle__icon--light {
   display: none;
 }
 
+@media (max-width: 768px) {
+  #themeToggle {
+    margin-right: 60px;
+    margin-left: auto;
+  }
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
