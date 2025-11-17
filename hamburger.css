@@ -13,7 +13,7 @@
   display: block !important;
   width: 100% !important;
   height: 2px !important;
-  background-color: #ffffff !important;
+  background-color: var(--theme-text, #ffffff) !important;
   transition: all 0.3s ease !important;
 }
 

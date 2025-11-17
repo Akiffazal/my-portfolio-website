@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -51,23 +51,16 @@
     <!-- Mobile Menu Styles -->
     <link rel="stylesheet" href="mobile-menu.css" />
     <link rel="stylesheet" href="hamburger.css" />
+    <link rel="stylesheet" href="theme.css" />
     
     <!-- Mobile Menu Script -->
     <script src="mobile-menu.js" defer></script>
-    <style>
-      .nav-link.active {
-        @apply text-white bg-white/10;
-      }
-      .filter-btn.active {
-        @apply text-white bg-white/10 border-accent/40;
-      }
-    </style>
   </head>
   <body class="bg-bg text-text font-inter">
     <!-- Header / Navbar -->
     <header id="header" class="sticky top-0 z-50 backdrop-blur bg-bg/85 border-b border-slate-700/50 shadow-lg">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
-        <a href="#welcome" class="text-base sm:text-lg font-semibold text-white whitespace-nowrap">Akif Fazal</a>
+        <a href="#welcome" class="text-base sm:text-lg font-semibold text-text whitespace-nowrap">Akif Fazal</a>
         <nav class="relative flex items-center gap-2" aria-label="Main Navigation">
           <button class="nav-toggle fixed top-4 right-4 md:hidden flex items-center justify-center transition z-50" aria-label="Toggle navigation" aria-expanded="false">
             <div class="hamburger-icon">
@@ -77,18 +70,29 @@
             </div>
           </button>
           <ul class="nav-list hidden md:flex items-center gap-4 absolute right-0 top-full mt-2 md:static md:top-auto md:right-auto bg-surface md:bg-transparent border md:border-0 border-slate-700/60 rounded-xl p-3 md:p-0 min-w-[220px] md:min-w-0 shadow-xl md:shadow-none z-50">
-            <li><a href="#welcome" class="nav-link block px-3 py-2 rounded-lg text-muted hover:text-white hover:bg-white/5">Welcome</a></li>
-            <li><a href="#about" class="nav-link block px-3 py-2 rounded-lg text-muted hover:text-white hover:bg-white/5">About</a></li>
-            <li><a href="#experience" class="nav-link block px-3 py-2 rounded-lg text-muted hover:text-white hover:bg-white/5">Experience</a></li>
-            <li><a href="#education" class="nav-link block px-3 py-2 rounded-lg text-muted hover:text-white hover:bg-white/5">Education</a></li>
-            <li><a href="#projects" class="nav-link block px-3 py-2 rounded-lg text-muted hover:text-white hover:bg-white/5">Projects</a></li>
-            <li><a href="#skills" class="nav-link block px-3 py-2 rounded-lg text-muted hover:text-white hover:bg-white/5">Skills</a></li>
-            <li><a href="#certifications" class="nav-link block px-3 py-2 rounded-lg text-muted hover:text-white hover:bg-white/5">Certifications</a></li>
-            <li><a href="#contact" class="nav-link block px-3 py-2 rounded-lg text-muted hover:text-white hover:bg-white/5">Contact</a></li>
+            <li><a href="#welcome" class="nav-link block px-3 py-2 rounded-lg text-muted hover:text-text hover:bg-white/5">Welcome</a></li>
+            <li><a href="#about" class="nav-link block px-3 py-2 rounded-lg text-muted hover:text-text hover:bg-white/5">About</a></li>
+            <li><a href="#experience" class="nav-link block px-3 py-2 rounded-lg text-muted hover:text-text hover:bg-white/5">Experience</a></li>
+            <li><a href="#education" class="nav-link block px-3 py-2 rounded-lg text-muted hover:text-text hover:bg-white/5">Education</a></li>
+            <li><a href="#projects" class="nav-link block px-3 py-2 rounded-lg text-muted hover:text-text hover:bg-white/5">Projects</a></li>
+            <li><a href="#skills" class="nav-link block px-3 py-2 rounded-lg text-muted hover:text-text hover:bg-white/5">Skills</a></li>
+            <li><a href="#certifications" class="nav-link block px-3 py-2 rounded-lg text-muted hover:text-text hover:bg-white/5">Certifications</a></li>
+            <li><a href="#contact" class="nav-link block px-3 py-2 rounded-lg text-muted hover:text-text hover:bg-white/5">Contact</a></li>
           </ul>
         </nav>
-        <button id="themeToggle" class="border border-slate-700/60 bg-surface text-white rounded-lg px-3 py-2" aria-label="Toggle dark mode">
-          <i class="fa-solid fa-moon"></i>
+        <button id="themeToggle" aria-label="Toggle light/dark mode" aria-pressed="false">
+          <span class="sr-only">Toggle light/dark mode</span>
+          <span class="theme-toggle__icon theme-toggle__icon--dark" aria-hidden="true">
+            <svg class="theme-toggle__svg" viewBox="0 0 24 24" role="presentation" focusable="false">
+              <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+            </svg>
+          </span>
+          <span class="theme-toggle__icon theme-toggle__icon--light" aria-hidden="true">
+            <svg class="theme-toggle__svg" viewBox="0 0 24 24" role="presentation" focusable="false">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2m0 16v2m10-10h-2M6 12H4m14.24-6.24l-1.42 1.42M7.18 16.82l-1.42 1.42m0-11.32l1.42 1.42m11.32 11.32l1.42 1.42" />
+            </svg>
+          </span>
         </button>
       </div>
     </header>
@@ -105,7 +109,7 @@
               <i class="fa-solid fa-file-arrow-down"></i>
               Download Resume
             </a>
-            <a class="inline-flex items-center gap-2 border border-slate-700/60 rounded-xl px-4 sm:px-5 py-2.5 sm:py-3 text-sm sm:text-base text-white hover:bg-white/5 transition" href="#projects">View Projects</a>
+            <a class="inline-flex items-center gap-2 border border-slate-700/60 rounded-xl px-4 sm:px-5 py-2.5 sm:py-3 text-sm sm:text-base text-text hover:bg-white/5 transition" href="#projects">View Projects</a>
           </div>
         </div>
         <div data-aos="zoom-in" data-aos-delay="200" class="flex justify-center order-1 md:order-2 mb-8 md:mb-0">
@@ -198,10 +202,10 @@
       <div class="max-w-6xl mx-auto px-4 sm:px-6" data-aos="fade-up">
         <h2 class="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8 flex items-center gap-3"><i class="fa-solid fa-diagram-project text-accent"></i> Projects</h2>
         <div class="project-filters flex flex-wrap gap-2 mb-6" aria-label="Project categories">
-          <button class="filter-btn active border border-slate-700/60 bg-surface text-muted hover:text-white hover:bg-white/5 rounded-lg px-3 py-1.5" data-filter="all">All</button>
-          <button class="filter-btn border border-slate-700/60 bg-surface text-muted hover:text-white hover:bg-white/5 rounded-lg px-3 py-1.5" data-filter="ai">AI</button>
-          <button class="filter-btn border border-slate-700/60 bg-surface text-muted hover:text-white hover:bg-white/5 rounded-lg px-3 py-1.5" data-filter="data">Data Analysis</button>
-          <button class="filter-btn border border-slate-700/60 bg-surface text-muted hover:text-white hover:bg-white/5 rounded-lg px-3 py-1.5" data-filter="embedded">Embedded Systems</button>
+          <button class="filter-btn active border border-slate-700/60 bg-surface text-muted hover:text-text hover:bg-white/5 rounded-lg px-3 py-1.5" data-filter="all">All</button>
+          <button class="filter-btn border border-slate-700/60 bg-surface text-muted hover:text-text hover:bg-white/5 rounded-lg px-3 py-1.5" data-filter="ai">AI</button>
+          <button class="filter-btn border border-slate-700/60 bg-surface text-muted hover:text-text hover:bg-white/5 rounded-lg px-3 py-1.5" data-filter="data">Data Analysis</button>
+          <button class="filter-btn border border-slate-700/60 bg-surface text-muted hover:text-text hover:bg-white/5 rounded-lg px-3 py-1.5" data-filter="embedded">Embedded Systems</button>
         </div>
         <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           <!-- Projects from Akif's GitHub profile -->

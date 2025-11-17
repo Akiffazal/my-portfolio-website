@@ -6,6 +6,7 @@
 
 (function () {
   const body = document.body;
+  const root = document.documentElement;
   const header = document.getElementById('header');
   const navToggle = document.querySelector('.nav-toggle');
   const navList = document.querySelector('.nav-list');
@@ -16,26 +17,46 @@
   // Footer year
   if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
-  // Theme persistence
   const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'light') {
-    body.classList.add('light');
-  }
 
-  const setThemeIcon = () => {
-    const isLight = body.classList.contains('light');
-    themeToggle.innerHTML = isLight ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
-    themeToggle.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
+  const applyTheme = (theme) => {
+    const nextTheme = theme === 'light' ? 'light' : 'dark';
+    root.dataset.theme = nextTheme;
+    body.classList.toggle('light', nextTheme === 'light');
   };
 
-  setThemeIcon();
+  const getPreferredTheme = () => {
+    if (savedTheme === 'light' || savedTheme === 'dark') return savedTheme;
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  };
+
+  applyTheme(getPreferredTheme());
+
+  const updateToggleState = () => {
+    if (!themeToggle) return;
+    const isLight = root.dataset.theme === 'light';
+    themeToggle.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
+    themeToggle.setAttribute('aria-pressed', String(isLight));
+  };
+
+  updateToggleState();
 
   // Theme toggle
   themeToggle?.addEventListener('click', () => {
-    body.classList.toggle('light');
-    localStorage.setItem('theme', body.classList.contains('light') ? 'light' : 'dark');
-    setThemeIcon();
+    const next = root.dataset.theme === 'light' ? 'dark' : 'light';
+    applyTheme(next);
+    localStorage.setItem('theme', next);
+    updateToggleState();
   });
+
+  if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (event) => {
+      const storedTheme = localStorage.getItem('theme');
+      if (storedTheme === 'light' || storedTheme === 'dark') return;
+      applyTheme(event.matches ? 'light' : 'dark');
+      updateToggleState();
+    });
+  }
 
   // Mobile nav toggle (Tailwind 'hidden' class)
   navToggle?.addEventListener('click', (e) => {
